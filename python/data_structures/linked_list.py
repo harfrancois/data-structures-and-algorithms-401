@@ -23,18 +23,16 @@ class LinkedList:
         last_node.next = new_node  # insert new node when none.
 
     def insert_before(self, value, new_value):
-        new_node = Node(new_value)
-        current = self.head
-        if current.value is value:
-            new_node.next = self.head
-            self.head = new_node
+        new_node = Node(new_value) # creating new node
+        current = self.head # current is the head
+        if current.value is value: # check to see if current is target value
+            new_node.next = self.head # new node next is connected to head
+            self.head = new_node # new node becomes the new head
 
-        while current.next is not None:
-            new_node.next = current.next
-            current.next = new_node
+        while current.next is not None: # while current has value
+            new_node.next = current.next # new node's next become the current node's next
+            current.next = new_node # current next is the new node
             return
-        else:
-            current =current.next
 
 
 
