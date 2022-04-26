@@ -4,15 +4,37 @@ class LinkedList:
     """
 
     def __init__(self):
+        self.next = None
         self.head = None
-        self.end = "NULL"
 
     def insert(self, value):
         self.head = Node(value, self.head)
 
-    def __str__(self):
+    def append(self, value):
+        new_node = Node(value)  # create new node.
 
-        return f"{self.end}"
+        if self.head is None:  # check if head has data.
+            self.head = new_node  # None becomes new head.
+            return
+
+        last_node = self.head  # if list is not empty?
+        while last_node.next:  # if not none continue loop.
+            last_node = last_node.next
+        last_node.next = new_node  # insert new node when none.
+
+    def insert_before(self, value, new_value):
+        new_node = Node(new_value)
+        current = self.head
+        if current.value is value:
+            new_node.next = self.head
+            self.head = new_node
+
+        while current.next is not None:
+            new_node.next = current.next
+            current.next = new_node
+            return
+        else:
+            current =current.next
 
 
 
@@ -24,16 +46,22 @@ class LinkedList:
             current = current.next
         return False
 
+    def __str__(self):
+        string = ""
+        if self.head == None:
+            return 'NULL'
+        current = self.head
+        while current:
+            string += f"{{ {current.value} }} -> "
+            current = current.next
+        string += 'NULL'
+        return string
+
+
 class Node:
-    def __init__(self, value, next=None, end="NULL"):
+    def __init__(self, value, next=None):
         self.value = value
         self.next = next
-        self.end = end
-
-    # def __str__(self):
-    #
-    #     return f"{self.next} -> {self.end}"
-
 
 
 class TargetError:
