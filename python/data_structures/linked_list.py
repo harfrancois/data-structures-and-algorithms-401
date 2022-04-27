@@ -3,9 +3,10 @@ class LinkedList:
     Put docstring here
     """
 
-    def __init__(self):
-        self.next = None
-        self.head = None
+    def __init__(self, next=None, value=None ):
+        self.next = next
+        self.head = value
+
 
     def insert(self, value):
         self.head = Node(value, self.head)
@@ -34,6 +35,9 @@ class LinkedList:
             current.next = new_node # current next is the new node
             return
 
+    # Iterative function to return the k'th node from the end in a linked list
+    def kth_from_end(self, k):
+
 
 
     def includes(self, target_value):
@@ -43,6 +47,8 @@ class LinkedList:
                 return True
             current = current.next
         return False
+
+
 
     def __str__(self):
         string = ""
