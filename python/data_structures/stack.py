@@ -4,9 +4,18 @@ class Stack:
     """
 
     def __init__(self):
-        # initialization here
-        pass
 
-    def some_method(self):
-        # method body here
-        pass
+
+# push the element at the last Index
+    def push(self, item):
+
+
+# remove last item.
+    def pop(self):
+
+
+# allows you to see the last element
+    def peek(self):
+
+
+

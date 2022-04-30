@@ -64,14 +64,15 @@ class LinkedList:
         return klast.value
 
     def zip_lists(self, list_a, list_b):
-        list_c = Node(-1)
-
+        new_node = Node(-1)
+        list_c = new_node
         while list_a and list_b:
             list_c.next = list_a
             list_a = list_a.next
             list_c.next = list_b
             list_b = list_b.next
-        list_c = list_c.next
+
+            list_c = list_c.next
 
 
 class Node:
