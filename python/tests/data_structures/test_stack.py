@@ -7,14 +7,12 @@ def test_exists():
     assert Stack
 
 
-
 def test_push_onto_empty():
     s = Stack()
     s.push("apple")
     actual = s.top.value
     expected = "apple"
     assert actual == expected
-
 
 
 def test_push_onto_full():
@@ -27,14 +25,12 @@ def test_push_onto_full():
     assert actual == expected
 
 
-
 def test_pop_single():
     s = Stack()
     s.push("apple")
     actual = s.pop()
     expected = "apple"
     assert actual == expected
-
 
 
 def test_pop_some():
@@ -52,7 +48,6 @@ def test_pop_some():
     assert actual == expected
 
 
-
 def test_pop_until_empty():
     s = Stack()
     s.push("apple")
@@ -66,7 +61,6 @@ def test_pop_until_empty():
     assert actual == expected
 
 
-
 def test_peek():
     s = Stack()
     s.push("apple")
@@ -76,14 +70,12 @@ def test_peek():
     assert actual == expected
 
 
-
 def test_peek_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
         s.peek()
 
     assert str(e.value) == "Method not allowed on empty collection"
-
 
 
 def test_pop_empty():
