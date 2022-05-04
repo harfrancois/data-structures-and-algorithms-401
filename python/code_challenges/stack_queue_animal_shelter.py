@@ -1,8 +1,16 @@
-from data_structures.queue import Queue
+
+
+
+def queue():
+    pass
 
 
 class AnimalShelter:
-    pass
+    def __init__(self):
+        self.dogs
+        self.cats
+
+    def enqueue(self, animal):
 
 
 class Dog:
