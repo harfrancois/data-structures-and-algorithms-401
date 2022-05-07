@@ -1,16 +1,21 @@
+
+
+
 class BinaryTree:
-    """
-    Put docstring here
-    """
+
+
+
 
     def __init__(self):
-        # initialization here
+        self.root = None
+
+    def pre_order(self, root):
         pass
 
-    def some_method(self):
-        # method body here
-        pass
 
 
 class Node:
-    pass
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
