@@ -7,10 +7,10 @@ def test_insertion_sort_exists():
 
 
 def test_insertion_sort():
-    list = [8, 4, 23, 42, 16]
-    actual = insertion_sort(list)
+    num_list = [8, 4, 23, 42, 16]
+    insertion_sort(num_list)
     expected = [4, 8, 16, 23, 42]
-    assert actual == expected
+    assert num_list == expected
 
 
 
